@@ -7,7 +7,7 @@ import subprocess
 import json
 
 
-cmd_ocm_login= "/usr/local/bin/ocm login --token $(cat /home/rcavalca/.ocm_token)"
+cmd_ocm_login= "/usr/local/bin/ocm login --token $(cat /tmp/.ocm_token)"
 # Execute the command and capture the output
 completed_process = subprocess.run(cmd_ocm_login, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
