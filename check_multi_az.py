@@ -52,8 +52,9 @@ response = requests.get(url, headers=headers)
 # Check if the request was successful (status code 200)
 if response.status_code == 200:
     # Access the response data
-    response_data = json.loads(response.text)
-    print(len(response_data['items']))
+    response_data = json.loads(response.text) 
+    print('Total Number of AZs:', len(response_data['items']))
+    print ('')
     # Remove unwanted key-value pairs
     unwanted_keys = ['kind', 'page', 'size', 'total']  # List of keys to remove
     for key in unwanted_keys:
